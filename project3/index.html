@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helloSystem">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Js</title>
+    <script src="//npmcdn.com/angular@1.6.5/angular.js"></script>
+    <script src="//npmcdn.com/@uirouter/angularjs@1.0.5/release/angular-ui-router.js"></script>
+    
+    <script src="helloSystem.js"></script>
+    <script src="components/hello.js"></script>
+    <script src="components/about.js"></script>
+    <style>
+        .active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a ui-sref="hello">Hello</a>
+    <a ui-sref="about">About</a>
+
+    <ui-view></ui-view>
+</body>
+</html>

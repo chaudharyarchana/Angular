@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Eggly">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script src="app/eggly-app.start.js"></script>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+           display: flex;
+           width: 100vw;
+           height: 100vh;
+           
+        }
+        #left{
+            width: 30vw ;
+            background-color: blue;
+            color: white;
+            list-style: none;
+        }
+        #left li a{
+            text-decoration: none;
+            color: white;
+        }
+        #right{
+            width: 70vw;
+        }
+        .right-div{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body ng-controller="MainCtrl">
+    <div id="container">
+        
+        <div id="left">
+            <li  ng-repeat="category in categories">
+                <a href="#" ng-click="setCurrentCategory(category)">{{category.name}}</a>
+                </li>
+               
+            
+        </div>
+        <div class="right">
+           <div class="right-div" ng-repeat="bookmark in bookmarks | filter: currentCategory.name">
+            <h1>{{bookmark.title}}</h1>
+            <button>Delete</button>
+           </div>
+
+        </div>
+    </div>
+</body>
+</html>
