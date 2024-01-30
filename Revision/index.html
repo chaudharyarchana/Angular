@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Revision</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs@1.0.7/release/angular-ui-router.min.js"></script>
+    <script src="/RoutingFile.js"></script>
+    <script src="/components/contact.js"></script>
+    <script src="/components/data.js"></script>
+    <script src="/services/data.js"></script>
+    <script src="/services/contact.js"></script>
+    <script src="services/person.js"></script>
+    <script src="/components/about.js"></script>
+
+
+</head>
+<body ng-app="routing">
+    
+    <a ui-sref="hello">PersonId</a>
+    <a ui-sref="about">Person</a>
+    <a ui-sref="contact">contact</a>
+    <a ui-sref="data">data</a>
+
+
+
+    <ui-view></ui-view>
+</body>
+</html>
