@@ -6,21 +6,23 @@ angular.module('routing',['ui.router'])
         component:'people',
         resolve:{
             peopleData : function(peopleService){
-                
-                  return peopleService.getData().then(function(res){
-                    console.log(res.data)
-                    return res.data
-                  })
-                
+                return peopleService.getData()
             }
         }
        
-    };
+    }
     var personState = {
         name:'person',
-        url:'/person',
-        component:'person'
+        url:'/people/{personId}',
+        component:'person',
+        resolve:{
+            personData : function(peopleService, $transition$){
+                
+                return peopleService.getPerson($transition$.params().personId);
+            }
+        }
     }
+
     $stateProvider.state(peopleState)
     $stateProvider.state(personState)
 

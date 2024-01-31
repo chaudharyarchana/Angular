@@ -1,5 +1,6 @@
 angular.module('routing').component('people',{
-    binding:{peopleData:'<'},
+    bindings:{peopleData:'<'},
+
     template: '<h3>Some people:</h3>' +
     '<ul>' +
     '  <li ng-repeat="person in $ctrl.peopleData">' +

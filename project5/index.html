@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 4</title>
+    <title>Angular project 5</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <script src="//unpkg.com/@uirouter/angularjs@1.0.7/release/angular-ui-router.min.js"></script>
 
+    <!-- All Files -->
     <script src="/routing.js"></script>
+    <script src="/components//allcontact.js"></script>
+    <script src="/service/allcontact.js"></script>
+    <script src="/components/contact.js"></script>
     <script src="/components/people.js"></script>
+    <script src="/service/people.js"></script>
     <script src="/components/person.js"></script>
-    <script src="/services/people.js"></script>
 
-    
 </head>
 <body ng-app="routing">
+    <h1 ng-init="hello='world'">Hello  Angular {{hello}}</h1>
+    <a ui-sref="home">Home</a>
+    <a ui-sref="allcontact">All Contact</a>
     <a ui-sref="people">People</a>
-    <!-- <a ui-sref="person">Person</a> -->
-    <ui-view></ui-view>
+
+    <!-- <a></a> -->
+     <ui-view></ui-view>
 </body>
 </html>
